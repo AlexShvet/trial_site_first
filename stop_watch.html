@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="for_stop_watch.js"></script>
+    <style>
+        #zero,#sta,#null_min,#minutes,#null_sec,#seconds,#two {
+            margin: 20px;
+            display: inline-block;
+            width: max-content;
+            background: yellow;
+            color: blue;
+            font-size: 30px;
+        }
+        #null_sec,#null_min {
+            margin: 20px -23px 20px 20px;
+        }
+        #zero {
+            display: none;
+        }
+        #notice {
+            display: none;
+        }
+        #notice {
+            font-size: 25px;
+            color: blue;
+            position: top;
+        }
+    </style>
+</head>
+<body>
+    <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
+        <div style="margin: 200px;" align="center">
+            <div id="zero" onclick="zero()">Обнулить</div>
+            <div id="sta" onclick="start()">Пуск</div>
+            <div id="null_min">0</div>
+            <div id="minutes">0</div>
+            <div id="null_sec">0</div>
+            <div id="seconds">0</div>
+            <div id="two" onclick="pause()">Пауза</div>
+        </div>
+</body>
+</html>
