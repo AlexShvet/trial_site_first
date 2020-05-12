@@ -2,8 +2,9 @@ t_start = 0;
 t_present = 0;
 pause_check = 0;
 minut = 0;
+var two = document.querySelector("#two");
+two.style.display = "none";
 function timer() {
-    //console.log(seconds);
     t_present = new Date().getTime();
     if (t_start == 0) {
         t_start = new Date().getTime();
@@ -54,7 +55,6 @@ function start() {
         timer();
         pause_check = 0;
     }
-    
 }
 
 function pause() {
