@@ -7,7 +7,6 @@
     <script src="for_stop_watch.js"></script>
     <style>
         #zero,#sta,#null_min,#minutes,#null_sec,#seconds,#two {
-            margin: 20px;
             display: inline-block;
             width: max-content;
             background: yellow;
@@ -15,18 +14,20 @@
             font-size: 30px;
         }
         #null_sec,#null_min {
-            margin: 20px -23px 20px 20px;
+            margin: 20px -13px 20px 20px;
         }
-        #zero {
+        #zero,#two {
             display: none;
         }
         #notice {
             display: none;
-        }
-        #notice {
+            position: absolute;
             font-size: 25px;
             color: blue;
-            position: top;
+            top: 0;
+        }
+        #zero,#start,#minutes,#seconds,#two {
+            margin: 10px;
         }
     </style>
 </head>

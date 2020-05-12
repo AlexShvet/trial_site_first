@@ -2,8 +2,6 @@ t_start = 0;
 t_present = 0;
 pause_check = 0;
 minut = 0;
-var two = document.querySelector("#two");
-two.style.display = "none";
 function timer() {
     t_present = new Date().getTime();
     if (t_start == 0) {
