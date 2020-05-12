@@ -1,5 +1,4 @@
 <?php
-var_dump($_GET['drop_table']);
 /*
 mysqli_query($link,"DROP TABLE reg_for_stopwatch");
 mysqli_query($link,"CREATE TABLE reg_for_stopwatch (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(20), login VARCHAR(20), password VARCHAR(32));");
@@ -13,12 +12,13 @@ mysqli_query($link,"CREATE TABLE reg_for_stopwatch (id INT PRIMARY KEY AUTO_INCR
     <title>Админка</title>
 </head>
 <body>
-    <a href="clear_all_members.php">Стереть всех зареганых(кроме админа(id == 1))</a><br><br>
+    <a href="clear_all_members.php">Стереть всех зареганых(кроме админа(его id == 1))</a><br><br>
     <a href="main_stop_watch.php">Перейти на main_stop_watch.php</a><br><br>
-    <form method="get">
-        <input name="drop_table" size="50" placeholder="Удалить таблицу с именем..."><a href="drop table.php"></a>
+    <form method="get" action="drop_table.php">
+        <input name="drop_table" size="50" placeholder="имя удаляемой таблицы"> для отправки нажми энтер
     </form><br><br>
-        
-    </form>
+    <form method="get" action="create_table.php">
+        <input name="create_table" size="50" placeholder="имя создаваемой таблицы"> для отправки нажми энтер
+    </form><br><br>
 </body>
 </html>

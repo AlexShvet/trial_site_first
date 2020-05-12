@@ -1,0 +1,49 @@
+@charset "utf-8";
+#stop_watch {
+    margin: 150px 0 70px 0;
+}
+
+#zero,
+#sta,
+#null_min,
+#minutes,
+#null_sec,
+#seconds,
+#two {
+    display: inline-block;
+    width: max-content;
+    background: yellow;
+    color: blue;
+    font-size: 30px;
+}
+
+#null_sec,
+#null_min {
+    margin: 20px -13px 20px 20px;
+}
+
+#zero,
+#two {
+    display: none;
+}
+
+#notice {
+    display: none;
+    position: absolute;
+    font-size: 25px;
+    color: blue;
+    top: 0;
+}
+
+#zero,
+#start,
+#minutes,
+#seconds,
+#two {
+    margin: 10px;
+}
+
+#weight,
+#many_times {
+    margin: 20px;
+}
