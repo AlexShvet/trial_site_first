@@ -20,5 +20,8 @@ mysqli_query($link,"CREATE TABLE reg_for_stopwatch (id INT PRIMARY KEY AUTO_INCR
     <form method="get" action="create_table.php">
         <input name="create_table" size="50" placeholder="имя создаваемой таблицы"> для отправки нажми энтер
     </form><br><br>
+    <form method="get" action="create_table.php">
+        <input name="create_table_for_write_result" size="50" placeholder="имя создаваемой таблицы для результатов"> для отправки нажми энтер
+    </form><br><br>
 </body>
 </html>
