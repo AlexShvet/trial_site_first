@@ -9,15 +9,16 @@ if(isset($_POST["submit"])){
     $username = htmlspecialchars($_POST["username"]);
     $login = htmlspecialchars($_POST["login"]);
     $password = md5($_POST["password"]);
-    $preg = $_POST["username"].$_POST["login"].$_POST["password"];
     $chek_exist = mysqli_query($link,"SELECT * FROM reg_for_stopwatch WHERE (`login` = '$login' AND `password` = '$password') LIMIT 1")->fetch_assoc();
     if (isset($chek_exist)) {
         echo" <br><br>такой пользователь уже есть";
     } else reg_and_write($link,$username,$login,$password);
 }
 function reg_and_write($link,$username,$login,$password){
-    Header("Location: stop_watch.html");
     $b = mysqli_query($link,"INSERT INTO reg_for_stopwatch (`username`,`login`,`password`) VALUES ('$username','$login','$password');");
+    $create_table_for_write_result = 'write_result_'.$_POST["login"];
+    mysqli_query($link,"CREATE TABLE `$create_table_for_write_result` (id INT PRIMARY KEY AUTO_INCREMENT, weight VARCHAR(50), many_times VARCHAR(50), date_time VARCHAR(50));");
+    Header("Location: stop_watch.html");
 }
 mysqli_close($link);
 ?>

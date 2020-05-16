@@ -16,6 +16,6 @@
         <input type="submit" value="готово">
     </form>
     <br>
-    <form action="registration.php" align="center"><button>Зарегаться</button></form>
+    <form action="registration.php" align="center"><button>Перейти к регистрации</button></form>
 </body>
 </html>
