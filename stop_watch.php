@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,7 @@
     <link rel="stylesheet" href="style_for_stop_watch.css">
 </head>
 <body>
+    <div>Сайт Александра приветствует Вас <?php echo $_SESSION["username"] ?>!</div>
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
         <div id="stop_watch" align="center">
             <div id="zero" onclick="zero()">Обнулить</div>

@@ -9,7 +9,7 @@ $password = md5($_POST["password"]);
 $admin = md5('admin');
 $chek_exist = mysqli_query($link,"SELECT * FROM reg_for_stopwatch WHERE (`login` = '$login' AND `password` = '$password') LIMIT 1")->fetch_assoc();
 if (isset($chek_exist) && $login !== 'admin' ) {
-        Header("Location: stop_watch.html");
+        Header("Location: stop_watch.php");
 } else if($login == 'admin' && $password == $admin){
         Header("Location: admin.php");
     } else Header("Location: registration.php");

@@ -1,5 +1,5 @@
 <?php
-print_r($login);
+session_start();
 $link = mysqli_connect("localhost","root","","reg");
 if (mysqli_connect_errno()) {
     printf("Соединение не удалось: %s\n", mysqli_connect_error());
@@ -13,12 +13,14 @@ if(isset($_POST["submit"])){
     if (isset($chek_exist)) {
         echo" <br><br>такой пользователь уже есть";
     } else reg_and_write($link,$username,$login,$password);
+    $_SESSION["username"] = $username;
+    $_SESSION["login"] = $login;
 }
 function reg_and_write($link,$username,$login,$password){
     $b = mysqli_query($link,"INSERT INTO reg_for_stopwatch (`username`,`login`,`password`) VALUES ('$username','$login','$password');");
-    $create_table_for_write_result = 'write_result_'.$_POST["login"];
-    mysqli_query($link,"CREATE TABLE `$create_table_for_write_result` (id INT PRIMARY KEY AUTO_INCREMENT, weight VARCHAR(50), many_times VARCHAR(50), date_time VARCHAR(50));");
-    Header("Location: stop_watch.html");
+    $create_table_for_write_result = 'write_result_'.$login;
+    mysqli_query($link,"CREATE TABLE `$create_table_for_write_result` (id INT PRIMARY KEY AUTO_INCREMENT, weight VARCHAR(50), many_times VARCHAR(50), date_time DATETIME);");
+    Header("Location: stop_watch.php");
 }
 mysqli_close($link);
 ?>
