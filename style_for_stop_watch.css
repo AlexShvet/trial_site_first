@@ -1,6 +1,15 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@531&family=Montserrat+Alternates:ital,wght@1,600&display=swap');
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: url(img/background.jpg) fixed ;
+    background-size: cover;
+}
+
 #stop_watch {
-    margin: 150px 0 70px 0;
+    margin: 80px 0 40px 0;
+    text-align: center;
 }
 
 #zero,
@@ -12,38 +21,69 @@
 #two {
     display: inline-block;
     width: max-content;
-    background: yellow;
-    color: blue;
+    color: yellow;
     font-size: 30px;
 }
 
 #null_sec,
 #null_min {
-    margin: 20px -13px 20px 20px;
+    margin: 20px -3px 20px 10px;
 }
 
-#zero,
+#zero {
+    display: none;
+    position: absolute;
+    color: yellow;
+    text-align: center;
+    top: 100px;
+}
+
 #two {
     display: none;
+    position: absolute;
+    color: yellow;
+    margin-left: -32px;
+    top: 200px;
 }
 
 #notice {
     display: none;
     position: absolute;
-    font-size: 25px;
-    color: blue;
-    top: 0;
+    color: yellow;
+    left: 50%;
+    margin-left: -250px;
+    top: 90px;
 }
 
-#zero,
-#start,
-#minutes,
-#seconds,
-#two {
-    margin: 10px;
+#greeting {
+    text-align: center;
+    color: #fee715;
 }
 
 #weight,
 #many_times {
-    margin: 20px;
+    margin: 15px;
+    height: 25px;
+    background-color: #0050f1;
+    border-radius: 9px;
+    color: #fee715;
+}
+
+input[type="number"]::-webkit-input-placeholder {
+    color: #fee715;
+}
+
+input[type="number"]::-moz-placeholder {
+    color: #fee715;
+}
+
+input {
+    border: none;
+}
+
+input[type="submit"] {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: yellow;
 }
