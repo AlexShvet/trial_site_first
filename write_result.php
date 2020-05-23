@@ -1,6 +1,6 @@
 <?php
 session_start();
-$link = mysqli_connect("localhost","root","","reg");
+$link = mysqli_connect("localhost","q96078vm_reg","Qwerty6622","q96078vm_reg");
 if (mysqli_connect_errno()) {
     printf("Соединение не удалось: %s\n", mysqli_connect_error());
     exit();

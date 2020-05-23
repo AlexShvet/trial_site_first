@@ -1,5 +1,6 @@
 <?php
 session_start();
+$username = $_SESSION["username"]["username"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="style_for_stop_watch.css">
 </head>
 <body>
-    <div>Сайт Александра приветствует Вас <?php echo $_SESSION["username"] ?>!</div>
+    <div>Сайт Александра приветствует Вас <?php echo $username ?>!</div>
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
         <div id="stop_watch" align="center">
             <div id="zero" onclick="zero()">Обнулить</div>
