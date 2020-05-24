@@ -11,7 +11,8 @@ if(isset($_POST["submit"])){
     $password = md5($_POST["password"]);
     $chek_exist = mysqli_query($link,"SELECT * FROM reg_for_stopwatch WHERE (`login` = '$login' AND `password` = '$password') LIMIT 1")->fetch_assoc();
     if (isset($chek_exist)) {
-        echo" <br><br>такой пользователь уже есть";
+        //echo" <br><br>такой пользователь уже есть";
+        Header("Location: main_stop_watch.php");
     } else reg_and_write($link,$username,$login,$password);
     $_SESSION["username"] = $username;
     $_SESSION["login"] = $login;
