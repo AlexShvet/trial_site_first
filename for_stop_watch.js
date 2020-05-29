@@ -41,8 +41,8 @@ function start() {
     notice.style.display = "none";
     var sta = document.querySelector("#sta");
     sta.style.display = "none";
-    var two = document.querySelector("#two");
-    two.style.display = "inline-block";
+    var pause = document.querySelector("#pause");
+    pause.style.display = "inline-block";
     if (pause_check == 0) {
         t_start = new Date().getTime();
         timer();
@@ -65,8 +65,8 @@ function pause() {
     var notice = document.querySelector("#notice");
     notice.style.display = "inline-block";
     sta.style.display = "inline-block";
-    var two = document.querySelector("#two");
-    two.style.display = "none";
+    var pause = document.querySelector("#pause");
+    pause.style.display = "none";
 }
 
 function zero() {
@@ -78,11 +78,10 @@ function zero() {
     minutes.innerText = "0";
     cancelAnimationFrame(paus);
     sta.style.display = "inline-block";
-    var two = document.querySelector("#two");
-    two.style.display = "none";
+    var pause = document.querySelector("#pause");
+    pause.style.display = "none";
+    var null_sec = document.querySelector("#null_sec");
     if (second >= 10) {
-        var null_sec = document.querySelector("#null_sec");
         null_sec.style.display = "none";
     } else null_sec.innerText = "0";
-    
 }

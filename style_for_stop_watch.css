@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@531&family=Montserrat+Alternates:ital,wght@1,600&display=swap');
 
 body {
+    background-color: darkblue;
     font-family: 'Montserrat Alternates', sans-serif;
     background: url(img/background.jpg) fixed ;
     background-size: cover;
 }
 
-#stop_watch {
-    margin: 80px 0 40px 0;
-    text-align: center;
+.stop_watch {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 30px 0;
+    height: 70px;
 }
 
 #zero,
@@ -18,44 +22,32 @@ body {
 #minutes,
 #null_sec,
 #seconds,
-#two {
-    display: inline-block;
-    width: max-content;
+#pause,
+#gap {
     color: yellow;
     font-size: 30px;
 }
 
-#null_sec,
-#null_min {
-    margin: 20px -3px 20px 10px;
+#zero, #pause, #notice {
+    display: none;
 }
 
-#zero {
-    display: none;
-    position: absolute;
-    color: yellow;
-    text-align: center;
-    top: 100px;
+.clock_face {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    margin: 20px 0;
 }
 
-#two {
-    display: none;
-    position: absolute;
-    color: yellow;
-    margin-left: -32px;
-    top: 200px;
+#gap {
+    margin: -2px 5px;
 }
 
 #notice {
-    display: none;
-    position: absolute;
-    color: yellow;
-    left: 50%;
-    margin-left: -250px;
-    top: 90px;
+    margin: 0 0 18px 0;
 }
 
-#greeting {
+#greeting, #notice {
     text-align: center;
     color: #fee715;
 }
@@ -75,6 +67,13 @@ input[type="number"]::-webkit-input-placeholder {
 
 input[type="number"]::-moz-placeholder {
     color: #fee715;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input {
