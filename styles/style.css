@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+.table {
+    display: flex;
+    justify-self: center;
+    width: 70%;
+    height: 50%;
+    background-color: blueviolet;
+}
+.column {
+    
+    margin: 10px;
+    background-color: orangered;
+}

@@ -10,10 +10,10 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
     <title>Document</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src="for_stop_watch.js"></script>
-    <link rel="stylesheet" href="style_for_stop_watch.css">
+    <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
-    <div id="greeting">Сайт Александра</div><br><div id="greeting">приветствует Вас, <?php echo $username ?>!</div><div class="stop_watch">
+    <div id="greeting">Доброго времени</div><br><div id="greeting">суток, <?php echo $username ?>!</div><div class="stop_watch">
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
         
             <div id="zero" onclick="zero()">Обнулить</div>
@@ -31,8 +31,10 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
             <form method="POST" action="write_result.php">
                 <input id="weight" type="number" name="weight" placeholder="    сюда вес (штанги)" required><br>
                 <input id="many_times" type="number" name="many_times" placeholder="    тут разы" required><br>
-                <input type="submit" value="готово">
+                <input type="submit" value="готово"><br><br>
+                <a href="graph.php">Глянуть график</a>
             </form>
         </div>
+
 </body>
 </html>

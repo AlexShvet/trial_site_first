@@ -13,7 +13,7 @@ mysqli_query($link,"CREATE TABLE reg_for_stopwatch (id INT PRIMARY KEY AUTO_INCR
 </head>
 <body>
     <a href="clear_all_members.php">Стереть всех зареганых(кроме админа(его id == 1))</a><br><br>
-    <a href="main_stop_watch.php">Перейти на main_stop_watch.php</a><br><br>
+    <a href="../main_stop_watch.php">Перейти на main_stop_watch.php</a><br><br>
     <form method="get" action="drop_table.php">
         <input name="drop_table" size="50" placeholder="имя удаляемой таблицы"> для отправки нажми энтер
     </form><br><br>
