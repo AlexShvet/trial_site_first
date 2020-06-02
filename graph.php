@@ -7,12 +7,18 @@ if (mysqli_connect_errno()) {
 }
 $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
 $username = 'write_result_'.$username;
-$data = mysqli_query($link,"SELECT * FROM $username")->fetch_all();
-//echo is_array($username) ? 'yes' : 'no';
-/*$lenght = count($data);
-for ($i=0; $i<$lenght; $i++) {
-    $result .= '$result_'.$i.', ';}
-    $result .= '$result_'.$i;*/
+$limit = 10;
+$data = mysqli_query($link,"SELECT * FROM $username LIMIT $limit")->fetch_all();
+$array_temp = [];
+foreach ($data as $temporary){
+    $element = $temporary[1]*$temporary[2];//берем только нужные элементы вес*разы
+    array_push($array_temp,$element);
+}
+$max_num = max($array_temp);//берем макс число для определения масштаба в графике
+$scale = 700/$max_num;//700 это высота графика в css/.table/height
+// echo "<pre>";
+// print_r( $array_temp);
+// echo"</pre>";
 mysqli_close($link);
 ?>
 <!DOCTYPE html>
@@ -25,35 +31,22 @@ mysqli_close($link);
 </head>
 <body>
     <div class='table'><div class="first"></div></div>
-    
-    <pre><p><?php print_r($data); ?></pre>
     <script>
     function create_column(height) {
         var table = document.getElementsByClassName('first')[0];
-        var width = "10px";
+        var width = "40px";
         var coord_width = 'width: ' + width;
         var coord_height = 'height: '+ height + "px";
         var element = "<div class='column' style= '"+ coord_width + "; " + coord_height +"'></div>";
         table.insertAdjacentHTML('afterend',element);
     }
-</script>
-
-</body>
-</html>
+    </script>
 <?php
-foreach ($data as $temporary){
-    $height = $temporary[1]*$temporary[2];
+foreach ($array_temp as $height){
+    //$height = $temporary[1]*$temporary[2];
+    $height = $height*$scale;
     echo "<script>create_column('$height');</script>";
 }
 ?>
-
-
-<script>/*
-var table = document.getElementsByClassName('table')[0];
-var width = "10px";
-var height = "100px";
-var coord_width = 'width: ' + width;
-var coord_height = 'height: '+ height;
-var element = "<div class='column' style= '"+ coord_width + "; " + coord_height +"'></div>";
-table.innerHTML = element;*/
-</script>
+</body>
+</html>
