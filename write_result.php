@@ -9,7 +9,7 @@ $login = $_SESSION["login"];
 $name_table = "write_result_".$login;
 $weight = htmlspecialchars($_POST["weight"]);
 $many_times = htmlspecialchars($_POST["many_times"]);
-$b = mysqli_query($link,"INSERT INTO $name_table (`weight`,`many_times`,`date_time`) VALUES ('$weight','$many_times',NOW());");
+$b = mysqli_query($link,"INSERT INTO $name_table (`weight`,`many_times`,`date_time`) VALUES ('$weight','$many_times',NOW());");//now() это настоящее время 
 Header ('Location: stop_watch.php');
 mysqli_close($link);
 ?>

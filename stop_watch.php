@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
