@@ -1,7 +1,6 @@
 <?php
 session_start();
 $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,6 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
 <body>
     <div id="greeting">Доброго времени</div><br><div id="greeting">суток, <?php echo $username ?>!</div><div class="stop_watch">
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
-        
             <div id="zero" onclick="zero()">Обнулить</div>
             <div id="sta" onclick="start()">Пуск</div>
             <div id="pause" onclick="pause()">Пауза</div>
@@ -36,6 +34,5 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
                 <a href="graph.php">Глянуть график</a>
             </form>
         </div>
-
 </body>
 </html>

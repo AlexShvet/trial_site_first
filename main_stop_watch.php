@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,8 @@
     <title>Логин</title>
 </head>
 <body>
-    
+    <?php echo "<br>".$_SESSION["message"]; ?>
+    <?php unset($_SESSION["message"]); ?>
     <form name="authorization" action="checking.php" method="post" align="center">
         <br><br>
         <h2>Вход</h2>
