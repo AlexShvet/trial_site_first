@@ -31,6 +31,7 @@ mysqli_close($link);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style_for_stop_watch.css">
     <title>Логин</title>
 </head>
 <body>
@@ -41,7 +42,7 @@ mysqli_close($link);
         <input type="text" maxlenght="50" name="username" placeholder="сюда имя" required><br><br>
         <input type="text"  maxlenght="20" name="login" placeholder="тут логин" required><br><br>
         <input type="text" maxlenght="20" name="password" placeholder="здесь пароль" required><br><br>
-        <input name="submit" type="submit" value="готово">
+        <input name="submit" type="submit" value="готово"><br><br>
         <input type="reset" value="очистить поля формы">
     </form>
 </body>

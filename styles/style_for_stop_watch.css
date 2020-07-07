@@ -8,6 +8,10 @@ body {
     background-size: cover;
 }
 
+h2, span {
+    color: yellow;
+}
+
 .stop_watch {
     display: flex;
     align-items: center;
