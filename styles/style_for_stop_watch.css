@@ -82,6 +82,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input {
     border: none;
+    outline: 0;
+}
+
+input:focus {
+    background-color: #FFFACD;
 }
 
 input[type="submit"] {
@@ -89,4 +94,17 @@ input[type="submit"] {
     width: 60px;
     border-radius: 30px;
     background-color: yellow;
+}
+
+input[type="button"],
+input[type="reset"],
+.forgot_pass {
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    font: 400 13px Arial;
+}
+
+form {
+     text-align: center;
 }
