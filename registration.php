@@ -11,8 +11,10 @@ if(isset($_POST["submit"])){
     $email = htmlspecialchars($_POST["email"]);
     $password = md5($_POST["password"]);
     $chek_exist = mysqli_query($link,"SELECT * FROM reg_for_stopwatch WHERE (`login` = '$login' AND `password` = '$password') LIMIT 1")->fetch_assoc();
+    $_SESSION["username"]["username"] = $username;
+    $_SESSION["login"] = $login;
     if (isset($chek_exist)) {
-        $_SESSION["username"] = $username;
+        $_SESSION["username"]["username"] = $username;
         $_SESSION["login"] = $login;
         $_SESSION["message"] = "Такой пользователь уже есть";
         Header("Location: main_stop_watch.php");

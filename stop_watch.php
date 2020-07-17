@@ -28,8 +28,8 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
             </div>
         <div align="center">
             <form method="POST" action="write_result.php">
-                <input id="weight" type="number" name="weight" placeholder="    сюда вес (штанги)" required><br>
-                <input id="many_times" type="number" name="many_times" placeholder="    тут разы" required><br>
+                <input id="weight" type="number" name="weight" placeholder="  сюда вес (штанги)" required><br>
+                <input id="many_times" type="number" name="many_times" placeholder="  тут разы" required><br>
                 <input type="submit" value="готово"><br><br>
                 <a href="graph.php">Глянуть график</a>
             </form>
