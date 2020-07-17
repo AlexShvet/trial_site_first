@@ -24,11 +24,6 @@ function reg_and_write($link,$username,$login,$password,$email){
     mysqli_query($link,"CREATE TABLE `$create_table_for_write_result` (id INT PRIMARY KEY AUTO_INCREMENT, weight VARCHAR(50), many_times VARCHAR(50), date_time DATETIME);");
     Header("Location: stop_watch.php");
 }
-/*if(isset($_POST["restore_email"])){
-    Header("Location: restore_email.php");
-    var_dump($_POST["restore_email"]);
-}*/
-
 mysqli_close($link);
 ?>
 <!DOCTYPE html>

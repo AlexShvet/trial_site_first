@@ -16,9 +16,6 @@ foreach ($data as $temporary){
 }
 $max_num = max($array_temp);//берем макс число для определения масштаба в графике
 $scale = 700/$max_num;//700 это высота графика в css/.table/height
-// echo "<pre>";
-// print_r( $array_temp);
-// echo"</pre>";
 mysqli_close($link);
 ?>
 <!DOCTYPE html>
@@ -27,10 +24,12 @@ mysqli_close($link);
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' href='styles/style.css'>
+    <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
-    <div class='table'><div class="first"></div></div>
+    <div class='table'><div class="first"></div></div><a href="stop_watch.php">Назад</a>
     <script>
     function create_column(height) {
         var table = document.getElementsByClassName('first')[0];
@@ -43,7 +42,6 @@ mysqli_close($link);
     </script>
 <?php
 foreach ($array_temp as $height){
-    //$height = $temporary[1]*$temporary[2];
     $height = $height*$scale;
     echo "<script>create_column('$height');</script>";
 }

@@ -3,7 +3,10 @@ session_start();
 if(isset($_POST["submit"])){
 $email = htmlspecialchars($_POST["email"]);
 $text_of_letter = "Ваш новый пароль";
-mail($email, "восстановление пароля", $text_of_letter, "From: itsdasv@yandex.com");
+$header_of_lether = "восстановление пароля";
+mail($email, $header_of_lether, $text_of_letter);
+unset($_POST["email"]);
+header("Location: registration.php");
 };
 ?>
 <!DOCTYPE html>
@@ -11,8 +14,9 @@ mail($email, "восстановление пароля", $text_of_letter, "From
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style_for_stop_watch.css">
     <title>восстановление пароля</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
     <form name="restore_email" action="" method="POST">

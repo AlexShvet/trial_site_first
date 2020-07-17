@@ -15,3 +15,7 @@ body {
     margin: 0 10px;
     background-color: darkblue;
 }
+
+a {
+    text-align: center;/* не работает, поправить */
+}

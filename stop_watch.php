@@ -7,7 +7,7 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Секундомер</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src="for_stop_watch.js"></script>
     <link rel="stylesheet" href="styles/style_for_stop_watch.css">
