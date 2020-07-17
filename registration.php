@@ -46,7 +46,7 @@ mysqli_close($link);
         <input type="email"  maxlenght="20" name="email" placeholder="это для почты" required><br><br>
         <input type="submit" name="submit" value="готово"><br><br>
         <input type="reset" value="очистить поля формы">
-        <a href="restore_email.php" class="forgot_pass"> &nbsp; жми, если забыл пароль &nbsp; </a><!-- пробелы что бы радиусы фона отступили от текста, как на button -->
+        <a href="restore_password.php" class="forgot_pass"> &nbsp; жми, если забыл пароль &nbsp; </a><!-- пробелы что бы радиусы фона отступили от текста, как на button -->
     </form>
 </body>
 </html>

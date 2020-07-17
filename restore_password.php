@@ -6,7 +6,7 @@ $text_of_letter = "Ваш новый пароль";
 $header_of_lether = "восстановление пароля";
 mail($email, $header_of_lether, $text_of_letter);
 unset($_POST["email"]);
-header("Location: registration.php");
+header("Location: restore_password_continue.php");
 };
 ?>
 <!DOCTYPE html>

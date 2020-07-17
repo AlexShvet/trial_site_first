@@ -51,7 +51,7 @@ h2, span {
     margin: 0 0 18px 0;
 }
 
-#greeting, #notice, a {
+#greeting, #notice, a, p {
     text-align: center;
     color: #fee715;
 }
