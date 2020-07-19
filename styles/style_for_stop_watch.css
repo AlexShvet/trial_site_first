@@ -32,7 +32,10 @@ h2, span {
     font-size: 30px;
 }
 
-#zero, #pause, #notice {
+#zero,
+#pause,
+#notice,
+form[name=restore_password] {
     display: none;
 }
 
@@ -106,5 +109,5 @@ input[type="reset"],
 }
 
 form {
-     text-align: center;
+    text-align: center;
 }

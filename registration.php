@@ -6,6 +6,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 if(isset($_POST["submit"])){
+    
     $username = htmlspecialchars($_POST["username"]);
     $login = htmlspecialchars($_POST["login"]);
     $email = htmlspecialchars($_POST["email"]);
@@ -36,6 +37,8 @@ mysqli_close($link);
         <link rel="stylesheet" href="styles/style_for_stop_watch.css">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Логин</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- от гуглсервера--> 
+    <script type="text/javascript" src="for_registration.js"></script>
 </head>
 <body>
     <form name="registration" action="" method="POST" >
@@ -46,9 +49,15 @@ mysqli_close($link);
         <input type="text"  maxlenght="20" name="login" placeholder="тут логин" required><br><br>
         <input type="text" maxlenght="20" name="password" placeholder="здесь пароль" required><br><br>
         <input type="email"  maxlenght="20" name="email" placeholder="это для почты" required><br><br>
-        <input type="submit" name="submit" value="готово"><br><br>
-        <input type="reset" value="очистить поля формы">
-        <a href="restore_password.php" class="forgot_pass"> &nbsp; жми, если забыл пароль &nbsp; </a><!-- пробелы что бы радиусы фона отступили от текста, как на button -->
+        <input type="submit" name="submit_reg" value="готово"><br><br>
+        <input type="reset" value=" очистить поля формы ">
+        <input type="button" class="forgot_pass" value=" жми, если забыл пароль "><br><br>
+    </form>
+    <form name="restore_password" action="" method="POST" >
+        <br><br>
+        <span>Введите почту на которую придёт пароль для восстановления</span><br><br>
+        <input class="restore_password" type="email"  maxlenght="20" name="restore_email" placeholder="это для почты" required><br><br>
+        <input class="restore_password" type="submit" name="submit_res" value="готово"><br><br>
     </form>
 </body>
 </html>
