@@ -18,7 +18,7 @@ if(isset($_POST["submit"])){
             }
             $new_password = mysqli_query($link,"SELECT password FROM reg_for_stopwatch WHERE login = '$login';")->fetch_assoc();//после того как записали новый пароль берем снова пароль из БД что б потом его сравнить
             if($last_password !== $new_password){//сравниваем старый пароль и тот который теперь в БД
-                echo "<br><p>пароль сменился успешно</p>";
+                echo "<br><p>пароль сменился успешно</p><p>Жми на \"Вернуться...\"</p>";
             }
             mysqli_close($link);
     } else answer();
@@ -39,7 +39,7 @@ function answer(){
     <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
-    <form name="restore_password" action="" method="POST">
+    <form name="restore_password_continue" action="" method="POST">
         <br><br>
         <input type="password"  maxlenght="20" name="password_one" placeholder="новый пароль" required><br><br>
         <input type="password" name="password_two" placeholder="новый пароль"><br><br>

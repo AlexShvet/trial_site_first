@@ -8,10 +8,6 @@ body {
     background-size: cover;
 }
 
-h2, span {
-    color: yellow;
-}
-
 .stop_watch {
     display: flex;
     align-items: center;
@@ -54,7 +50,12 @@ form[name=restore_password] {
     margin: 0 0 18px 0;
 }
 
-#greeting, #notice, a, p {
+#greeting,
+#notice,
+a,
+p,
+h2,
+span {
     text-align: center;
     color: #fee715;
 }
