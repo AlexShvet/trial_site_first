@@ -83,10 +83,5 @@ function zero() {
     let pause = document.querySelector("#pause");
     pause.style.display = "none";
     let null_sec = document.querySelector("#null_sec");
-    if (second >= 10) {
-        null_sec.style.display = "none";
-    } 
-    if (second < 10) {
-        null_sec.style.display = "inline-block";
-    }
-    }
+    null_sec.style.display = "inline-block";
+}
