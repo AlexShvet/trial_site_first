@@ -1,9 +1,9 @@
 
-t_start = 0;
-t_present = 0;
-pause_check = 0;
-minut = 0;
-second = 0;
+let t_start = 0;
+let t_present = 0;
+let pause_check = 0;
+let minut = 0;
+let second = 0;
 function timer() {
     t_present = new Date().getTime();
     if (t_start == 0) {
