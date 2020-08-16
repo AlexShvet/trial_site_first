@@ -9,10 +9,17 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Секундомер</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="for_stop_watch.js"></script>
+    <script src="Javascripts/for_stop_watch.js"></script>
+    <script type="text/javascript" src="Javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Javascripts/fortune.js" defer></script>
     <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
+    <div class="menu">
+        <input type="button" value="Меню">
+        <input type="text" class="input_name" placeholder="Пишите сюда Ваши инициалы" size="25" maxlength="5">
+        <div class="answer_fortune_js"></div>
+    </div>
     <div id="greeting">Доброго времени</div><br><div id="greeting">суток, <?php echo $username ?>!</div><div class="stop_watch">
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
             <div id="zero" onclick="zero()">Обнулить</div>

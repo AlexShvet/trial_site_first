@@ -55,7 +55,8 @@ form[name=restore_password] {
 a,
 p,
 h2,
-span {
+span,
+h3 {
     text-align: center;
     color: #fee715;
 }
@@ -67,21 +68,6 @@ span {
     background-color: #0050f1;
     border-radius: 9px;
     color: #fee715;
-}
-
-input[type="number"]::-webkit-input-placeholder {
-    color: #fee715;
-}
-
-input[type="number"]::-moz-placeholder {
-    color: #fee715;
-    -moz-appearance: textfield;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
 
 input {
@@ -102,7 +88,8 @@ input[type="submit"] {
 
 input[type="button"],
 input[type="reset"],
-.forgot_pass {
+.forgot_pass,
+.help {
     border-radius: 10px;
     background-color: yellow;
     color: black;
@@ -111,4 +98,33 @@ input[type="reset"],
 
 form {
     text-align: center;
+}
+
+.menu {
+    position: absolute;
+}
+
+.input_name,
+.help_text {
+    display: none;
+}
+
+.menu:focus-within input[type="text"] {
+    display: inline-block;
+}
+
+.help {
+    display: inline;
+}
+
+.help_text {
+    width: 300px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    position: absolute;
+}
+
+.help_text p,h3 {
+    color: #ffa089;
 }

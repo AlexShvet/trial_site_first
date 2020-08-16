@@ -48,7 +48,7 @@ mysqli_close($link);
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Логин</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- от гуглсервера--> 
-    <script type="text/javascript" src="for_registration.js"></script>
+    <script type="text/javascript" src="Javascripts/for_registration.js"></script>
 </head>
 <body>
     <form name="registration" action="" method="POST" >
