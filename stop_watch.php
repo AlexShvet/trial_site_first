@@ -15,11 +15,7 @@ $username = mb_convert_encoding($_SESSION["username"]["username"],'UTF-8');
     <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
-    <div class="menu">
-        <input type="button" value="Меню">
-        <input type="text" class="input_name" placeholder="Пишите сюда Ваши инициалы" size="25" maxlength="5">
-        <div class="answer_fortune_js"></div>
-    </div>
+    <?php include_once("menu.php"); ?>
     <div id="greeting">Доброго времени</div><br><div id="greeting">суток, <?php echo $username ?>!</div><div class="stop_watch">
     <div id="notice">Что бы обнулить время, нажми сначала кнопку "Пуск"</div>
             <div id="zero" onclick="zero()">Обнулить</div>

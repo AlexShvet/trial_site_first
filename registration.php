@@ -48,9 +48,11 @@ mysqli_close($link);
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Логин</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- от гуглсервера--> 
-    <script type="text/javascript" src="Javascripts/for_registration.js"></script>
+    <script type="text/javascript" src="Javascripts/for_registration.js" defer></script>
+    <script type="text/javascript" src="Javascripts/fortune.js" defer></script>
 </head>
 <body>
+    <?php include_once("menu.php"); ?>
     <form name="registration" action="" method="POST" >
         <br><br>
         <h2>Регаемся</h2>
@@ -64,7 +66,7 @@ mysqli_close($link);
         <input type="button" class="forgot_pass" value=" жми, если забыл пароль "><br><br>
     </form>
     <form name="restore_password" action="" method="POST" >
-        <br><br>
+        <br><br><br>
         <span>Введите почту на которую придёт пароль для восстановления</span><br><br>
         <input class="restore_password" type="email"  maxlenght="20" name="restore_email" placeholder="это для почты" required><br><br>
         <input class="restore_password" type="submit" name="submit_res" value="готово"><br><br>

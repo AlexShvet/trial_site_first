@@ -39,6 +39,7 @@ function answer(){
     <link rel="stylesheet" href="styles/style_for_stop_watch.css">
 </head>
 <body>
+    <?php include_once("menu.php"); ?>
     <form name="restore_password_continue" action="" method="POST">
         <br><br>
         <input type="password"  maxlenght="20" name="password_one" placeholder="новый пароль" required><br><br>
