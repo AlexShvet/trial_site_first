@@ -33,12 +33,18 @@ $(document).ready(function () {
         }
     })
     $(".help").hover(function () {
-        let before;
+        let before,
+        beforeColor;
+        
         handlerIn(before)
+        handlerInBackgroundColor(beforeColor)
     },
         function () {
-            let after;
+            let after,
+            afterColor;
+        
             handlerInOut(after)
+            handlerInOutBackgroundColor(afterColor)
         })
     
     function handlerIn(before) {
@@ -57,5 +63,23 @@ $(document).ready(function () {
         })
     }
 
+   
+    function handlerInBackgroundColor(beforeColor) {
+        return beforeColor = $("input").css({
+            
+            
+            "background-color": "darkblue"
+            
+        })
+    }
+
+    function handlerInOutBackgroundColor(afterColor) {
+        return afterColor = $("input").css({
+            
+            
+            "background-color": "yellow"
+            
+        })
+    }
     
 });
